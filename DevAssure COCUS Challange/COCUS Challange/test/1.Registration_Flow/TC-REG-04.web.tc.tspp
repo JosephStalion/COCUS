@@ -1,0 +1,54 @@
+>>testDataType: undefined
+>>summary: Create Account with valid email
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/signin --> The sign-in page is succesfully loaded
+Verify if "Sign In" Text is visible --> The "Sign In" text element is displayed on the page.
+Verify if text = "Sign In" --> The text of the element matches "Sign In".
+Click on "Don't have an account? Sign Up" --> The registration form is displayed (no-account flow initiated).
+Click on field "Name" --> The "Name" input field is focused/activated.
+Input Value "John Doe" --> The "Name" field is populated with "john Doe".
+Click on field "Email" --> The "Email" input field is focused/activated.
+Generate a random email using the function "random_email" --> A valid random email address is generated (e.g., user123@example.com).
+Wait for 10ms --> The system pauses briefly to ensure element readiness.
+Input generated random email --> The "Email" field is populated with the generated random email.
+Click on "Password" --> The "Password" input field is focused/activated.
+wait for 10ms --> The system pauses briefly to ensure element readiness.
+input value "password" --> The "Password" field is populated with "password".
+Click on "Confirm Password" --> The "Confirm Password" input field is focused/activated.
+wait for 10ms --> The system pauses briefly to ensure element readiness.
+Input value "password" into Confirm Password --> The "Confirm Password" field is populated with "password" (matching the password).
+wait for 10ms --> The system pauses briefly to ensure element readiness.
+Click on Button Register --> Registration is submitted, and the user is redirected to the next page.
+Verify if text of login page = "Team Balancer" --> The header text on the redirected page matches "Team Balancer".
+^^
+
+--Open URL-- ::urls.COCUS_SignIn:: 
+--Verify if-- {{web > TeamBuilderBalancer > SignInText}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > SignInText}} --is equal to-- [[Sign In]] 
+--Click on-- {{web > TeamBuilderBalancer > NoAccountBtn}} 
+--Click on-- {{web > TeamBuilderBalancer > Name}} 
+--Input value-- [[john doe]] --in-- {{web > TeamBuilderBalancer > Name}} 
+--Click on-- {{web > TeamBuilderBalancer > Email}} 
+#Input random "data" for user email 
+::random_email_gen = __web > TeamBuilderBalancer > random_email__ 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- ::random_email_gen:: --in-- {{web > TeamBuilderBalancer > Email}} 
+--Click on-- {{web > TeamBuilderBalancer > Password}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[password]] --in-- {{web > TeamBuilderBalancer > Password}} 
+--Click on-- {{web > TeamBuilderBalancer > ConfirmPassword}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[password]] --in-- {{web > TeamBuilderBalancer > ConfirmPassword}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Click on-- {{web > TeamBuilderBalancer > RegisterBtnn}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > HeaderTextLoggedIn}} --is equal to-- [[Team Balancer]] 
+

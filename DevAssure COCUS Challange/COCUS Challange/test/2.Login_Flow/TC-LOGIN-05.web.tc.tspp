@@ -1,0 +1,19 @@
+>>testDataType: undefined
+>>summary: Enter valid email (e.g., test@example.com) and password and sign in
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+--Open URL-- ::urls.COCUS_SignIn:: 
+--Click on-- {{web > TeamBuilderBalancer > Email}} 
+--Input value-- [[y645sl512b@example.com]] --in-- {{web > TeamBuilderBalancer > Email}} 
+--Click on-- {{web > TeamBuilderBalancer > Password}} 
+--Input value-- [[password]] --in-- {{web > TeamBuilderBalancer > Password}} 
+--Click on-- {{web > TeamBuilderBalancer > SignInBtn}} 
+--Verify if-- {{web > TeamBuilderBalancer > HeaderTextLoggedIn}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > HeaderTextLoggedIn}} --is equal to-- [[Team Balancer]] 
+

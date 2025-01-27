@@ -1,0 +1,45 @@
+>>testDataType: undefined
+>>summary: Create account with existing email
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/signup --> The registration page loads successfully.
+Verify "Sign In" text is visible --> The "Register" text element is displayed on the page.
+verify if text of the page = "Register" --> The text of the page matches "Register".
+Click on field "Name" --> The "Name" input field is focused/activated.
+Input value "John Doe" into field "Name" --> The "Name" field is populated with "John Doe".
+Click on "Email" field --> The "Email" input field is focused/activated.
+wait for 10ms --> The system pauses briefly to ensure element readiness.
+input value "teste@mail.com" into "Email" field --> The "Email" field is populated with an already in use email.
+Click on "Password" field --> The "Password" input field is focused/activated.
+wait for 10ms --> The system pauses briefly to ensure element readiness.
+Input value "password" into "Password" field --> The "Password" field is populated with "password".
+Click on "Confirm Password" field --> The "Confirm Password" input field is focused/activated.
+Wait for 10ms --> The system pauses briefly to ensure element readiness.
+Inpout "password" into "Confirm Password" field --> The "Confirm Password" field is populated with "password" (matching the password).
+Click on "Register" button --> Registration submission fails due to invalid email format.
+Verify if "Aler Dialog" is preseant at the bottom of the page --> An error dialog appears indicating invalid email or registration failure.
+^^
+
+--Open URL-- ::urls.COCUS_SignUp:: 
+--Verify if-- {{web > TeamBuilderBalancer > SignInText}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > SignInText}} --is equal to-- [[Register]] 
+--Click on-- {{web > TeamBuilderBalancer > Name}} 
+--Input value-- [[John Doe]] --in-- {{web > TeamBuilderBalancer > Name}} 
+--Click on-- {{web > TeamBuilderBalancer > Email}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[test@mail.com]] --in-- {{web > TeamBuilderBalancer > Email}} 
+--Click on-- {{web > TeamBuilderBalancer > Password}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[password]] --in-- {{web > TeamBuilderBalancer > Password}} 
+--Click on-- {{web > TeamBuilderBalancer > ConfirmPassword}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[password]] --in-- {{web > TeamBuilderBalancer > ConfirmPassword}} 
+--Click on-- {{web > TeamBuilderBalancer > RegisterBtnn}} 
+

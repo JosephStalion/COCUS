@@ -1,0 +1,38 @@
+>>testDataType: undefined
+>>summary: Select a sport fill all the necesseray fiedls and creat team without skills
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+__web > TeamBuilderBalancer > Login__ ::urls.COCUS_SignIn:: [[Sign In]] [[test@mail.com]] [[password]] [[Team Balancer]] 
+--Verify if-- {{web > TeamBuilderBalancer > PageNavSoccer}} --is present-- 
+--Click on-- {{web > TeamBuilderBalancer > PageNavSoccer}} 
+--Click on-- {{web > TeamBuilderBalancer > NumberofPlayers}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[2]] --in-- {{web > TeamBuilderBalancer > NumberofPlayers}} 
+--Click on-- {{web > TeamBuilderBalancer > NumberofTeams}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[2]] --in-- {{web > TeamBuilderBalancer > NumberofTeams}} 
+--Click on-- {{web > TeamBuilderBalancer > NextButton}} 
+--Wait for-- [[100]] --milliseconds-- 
+--Click on-- {{web > TeamBuilderBalancer > fltsemanticnode85}} 
+--Verify if-- {{web > TeamBuilderBalancer > Pleaseenterplayername1}} --is visible-- 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[John Does]] --in-- {{web > TeamBuilderBalancer > Pleaseenterplayername1}} 
+--Verify if-- {{web > TeamBuilderBalancer > Pleaseenterplayername2}} --is visible-- 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[KenyGin]] --in-- {{web > TeamBuilderBalancer > Pleaseenterplayername2}} 
+##Click on Confirm Button 
+--Click on-- {{web > TeamBuilderBalancer > GenerateTeamsBtn}} 
+--Verify if-- {{web > TeamBuilderBalancer > PrefilledSkillsValuePopUp}} --is visible-- 
+--Click on-- {{web > TeamBuilderBalancer > SignInBtn}} 
+--Click on-- {{web > TeamBuilderBalancer > GenerateTeamsBtn}} 
+--Verify if-- {{web > TeamBuilderBalancer > WelcomePopUp_1}} --is visible-- 
+--Click on-- {{web > TeamBuilderBalancer > GotItBtn}} 
+--Verify if-- {{web > TeamBuilderBalancer > TeamsResultTxt}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > TeamsResultTxt}} --is equal to-- [[Teams Result]] 
+

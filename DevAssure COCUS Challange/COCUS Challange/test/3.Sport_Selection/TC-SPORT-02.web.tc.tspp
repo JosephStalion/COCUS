@@ -1,0 +1,20 @@
+>>testDataType: undefined
+>>summary: Select a sport and click "Next without selecting a Nº teams and players
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+__web > TeamBuilderBalancer > Login__ ::urls.COCUS_SignIn:: [[Sign In]] [[y645sl512b@example.com]] [[password]] [[Team Balancer]] 
+--Verify if-- {{web > TeamBuilderBalancer > PageNavSoccer}} --is present-- 
+--Click on-- {{web > TeamBuilderBalancer > PageNavSoccer}} 
+--Verify if text of-- {{web > TeamBuilderBalancer > PageTextSoccer}} --is equal to-- [[Soccer]] 
+--Click on-- {{web > TeamBuilderBalancer > SignInBtn}} 
+--Verify if-- {{web > TeamBuilderBalancer > ErrorNoPlayers}} --is present-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > ErrorNoPlayers}} --is equal to-- [[Please enter the number of players]] 
+--Verify if-- {{web > TeamBuilderBalancer > ErrorNoTeams}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > ErrorNoTeams}} --is equal to-- [[Please enter the number of teams]] 
+
