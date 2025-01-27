@@ -1,0 +1,26 @@
+>>testDataType: undefined
+>>summary: Click "Forgot Password" and see if reset form appears
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/sigin --> The sign-in page loads successfully.
+Verify if "Sign In" text is visible --> The "Sign In" text element is displayed on the page.
+Verify if text of "Sign In" equals "Sign In" --> The text of the element matches "Sign In" exactly.
+Click on "Forget Password" --> The "Forgot Password" section or related UI component is triggered.
+Verify if "Forgot Password" text is present --> The "Forgot Password?" text element is displayed on the page.
+Verify if Forgot Password" equals "Forgot Password?" --> The text of the element matches "Forgot Password?" exactly (including punctuation.
+^^
+
+--Open URL-- ::urls.COCUS_SignIn:: 
+--Verify if-- {{web > TeamBuilderBalancer > SignInText}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > SignInText}} --is equal to-- [[Sign In]] 
+--Click on-- {{web > TeamBuilderBalancer > HeaderTextOnBoard1}} 
+--Verify if-- {{web > TeamBuilderBalancer > ForgotPasswordTxt}} --is present-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > ForgotPasswordTxt}} --is equal to-- [[Forgot Password?]] 
+

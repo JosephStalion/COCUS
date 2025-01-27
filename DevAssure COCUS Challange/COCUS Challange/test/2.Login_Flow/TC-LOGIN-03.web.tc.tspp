@@ -1,0 +1,32 @@
+>>testDataType: undefined
+>>summary: Login to homepage with invalid password
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/signin --> The sign-in page loads successfully.
+Verify if "Sign In" text is visible --> The "Sign In" text element is displayed on the page.
+Verify if text "Sign In" text equals "Sign In" --> he text of the element matches "Sign In".
+Click on "Email" --> The "Email" input field is focused/activated.
+Input value "test@mail.com" into "Email" --> The "Email" field is populated with "test@mail.com".
+Click on "Password" --> The "Password" input field is focused/activated.
+Input value "fakepassword" into "Password" (input a wrong password) --> The "Password" field is populated with "fakepassword".
+Click on "Sign In" button --> Login submission fails due to invalid credentials.
+Visually compare page to snapshot with label "ErrorLogin" --> The current page matches the "ErrorLogin" snapshot, confirming the error state.
+^^
+
+--Open URL-- ::urls.COCUS_SignIn:: 
+--Verify if-- {{web > TeamBuilderBalancer > SignInText}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > SignInText}} --is equal to-- [[Sign In]] 
+--Click on-- {{web > TeamBuilderBalancer > Email}} 
+--Input value-- [[test@mail.com]] --in-- {{web > TeamBuilderBalancer > Email}} 
+--Click on-- {{web > TeamBuilderBalancer > Password}} 
+--Input value-- [[fakepassword]] --in-- {{web > TeamBuilderBalancer > Password}} 
+--Click on-- {{web > TeamBuilderBalancer > SignInBtn}} 
+#--Visually compare page to snapshot with label-- [[ErrorLogin]]
+

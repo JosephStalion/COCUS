@@ -1,0 +1,26 @@
+>>testDataType: undefined
+>>summary: Opens URL SignIn and validates if the page is loading properly
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/signin --> The sign-in page loads successfully.
+Verify if "Sign In" text is visible --> The "Sign In" text element is displayed on the page.
+Verify if "Sign In" text is equal to "Sign In" --> The text of the element matches "Sign In".
+Verify if "Email" is visible --> The "Email" input field is displayed on the sign-in page.
+Verify if "Password" is visible --> The "Password" input field is displayed on the sign-in page.
+Verify if "Sign In" Btn is visible --> The "Sign In" button is displayed and accessible on the sign-in page.
+^^
+
+--Open URL-- ::urls.COCUS_SignIn:: 
+--Verify if-- {{web > TeamBuilderBalancer > SignInText}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > SignInText}} --is equal to-- [[Sign In]] 
+--Verify if-- {{web > TeamBuilderBalancer > Email}} --is visible-- 
+--Verify if-- {{web > TeamBuilderBalancer > Password}} --is visible-- 
+--Verify if-- {{web > TeamBuilderBalancer > SignInBtn}} --is visible-- 
+

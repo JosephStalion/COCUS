@@ -1,0 +1,30 @@
+>>testDataType: undefined
+>>summary: Enter valid email (e.g., test@example.com) and password and sign in
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/signin --> The sign-in page loads successfully.
+Click on "Email" --> The "Email" input field is focused/activated.
+Input value "y645s1512b@example.com" into "Email" (valid email) --> The "Email" field is populated with the valid email address.
+Click on "Password" --> The "Password" input field is focused/activated.
+Input value "password" into "Password" (valid password) --> The "Password" field is populated with "password".
+Click on "Sign In" button --> Login is successful, and the user is redirected to the authenticated page.
+Verify if "Team Balancer" is visible --> The header element "Team Balancer" is displayed on the post-login page.
+Verify if text of "Team Balancer" equals "Team Balancer" --> The header text matches "Team Balancer", confirming successful login.
+^^
+
+--Open URL-- ::urls.COCUS_SignIn:: 
+--Click on-- {{web > TeamBuilderBalancer > Email}} 
+--Input value-- [[y645sl512b@example.com]] --in-- {{web > TeamBuilderBalancer > Email}} 
+--Click on-- {{web > TeamBuilderBalancer > Password}} 
+--Input value-- [[password]] --in-- {{web > TeamBuilderBalancer > Password}} 
+--Click on-- {{web > TeamBuilderBalancer > SignInBtn}} 
+--Verify if-- {{web > TeamBuilderBalancer > HeaderTextLoggedIn}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > HeaderTextLoggedIn}} --is equal to-- [[Team Balancer]] 
+

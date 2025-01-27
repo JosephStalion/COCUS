@@ -1,0 +1,25 @@
+>>testDataType: undefined
+>>summary: Select sport soccer
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/signin --> The sign-in page loads successfully.
+Click on "Email" --> The "Email" input field is focused/activated.
+Input vlaid email into "Email" --> The "Email" field is populated with the valid email address.
+Click on "Password" --> The "Password" input field is focused/activated.
+Input value "password" into "Password" --> The "Password" field is populated with "password".
+Click on "Sign In" button --> Login submission succeeds due to valid credentials.
+Verify if text "Team Balancer" is visible --> The "Team Balancer" text is displayed on the page.
+Verify if "Soccer Card" is present --> The "Soccer" text is displayed on the page
+Click on "Soccer card" --> Click submission succeeds and navaigates to page Soccer
+Verify if text "Soccer" is equal to "Soccer" --> The text "Soccer" is present and is equal to "Soccer"
+^^
+
+__web > TeamBuilderBalancer > SelectSport__ ::urls.COCUS_SignIn:: [[Sign In]] [[y645sl512b@example.com]] [[password]] [[Team Balancer]] [[Soccer]] 
+

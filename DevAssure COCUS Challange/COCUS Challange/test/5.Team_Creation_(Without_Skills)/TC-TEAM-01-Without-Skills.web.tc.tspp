@@ -1,0 +1,73 @@
+>>testDataType: undefined
+>>summary: Select a sport fill all the necesseray fiedls and creat team without skills
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/signin --> User is logged in and navigated to the "Team Balance" page.
+Click on "Email" --> The "Email" input field is focused/activated.
+Input vlaid email into "Email" --> The "Email" field is populated with the valid email address.
+Click on "Password" --> The "Password" input field is focused/activated.
+Input value "password" into "Password" --> The "Password" field is populated with "password".
+Click on "Sign In" button --> Login submission succeeds due to valid credentials.
+Verify if text "Team Balancer" is visible --> The "Team Balancer" text is displayed on the page.
+Verify if "Soccer Card" is present --> The "Soccer" text is displayed on the page.
+Click on "Soccer card" --> Click submission succeeds and navaigates to page Soccer.
+Verify if text "Soccer" is equal to "Soccer" --> The text "Soccer" is present and is equal to "Soccer"
+Click on "Number of Players" --> The "NumberOfFlayers" input field is focused/activated.
+Wait for 10 milliseconds --> Brief pause to ensure system readiness.
+Input value "2" into "Number Of Players" --> The "NumberOfFlayers" input field is focused/activated.
+Click on "Number Of Teams" --> The "NumberOfTeam" input field is focused/activated.
+Wait for 10 milliseconds --> Brief pause to ensure system readiness.
+Click on "Generate Teams" button
+Wait for 100 milliseconds --> Pause to allow system processing.
+Click anywhere in the screen to dismiss view windows
+Verify if Player Name 1 is visibile --> The "Player Name 1" field is displayed.
+Wait for 10 milliseconds --> Brief pause to ensure system readiness.
+Input value "John Does" into Player Name 1 --> Player name "John Does" is entered into the first player name field.
+Verify if Player Name 2 is visible --> The second player name input field is displayed.
+Wait for 10 milliseconds --> Brief pause to ensure system readiness.
+Input value "Kenygin" into Player Name 2 --> Player name "Kenygin" is entered into the second player name field.
+Click on "Generate Teams" button --> Team generation process is initiated.
+Verify if Prefilled Skill" popup is visible --> A pop-up for skill validation appears.
+Click on "Confirm" button --> Confirm button is clicked and triggers confirmation.
+Click on "Generate Teams" button --> Team generation is confirmed.
+Verify if "Welcome" popUp is visible --> A welcome/confirmation pop-up is displayed.
+Click on "Got It" button --> Pop-up is dismissed, and user proceeds to results.
+Verify if "Teams Result" is visible --> The "Teams Result" text or section is displayed.
+Verify if text of "Teams Result" equals "Teams Result" --> The result text matches "Teams Result", confirming successful team generation.
+^^
+
+__web > TeamBuilderBalancer > Login__ ::urls.COCUS_SignIn:: [[Sign In]] [[test@mail.com]] [[password]] [[Team Balancer]] 
+--Verify if-- {{web > TeamBuilderBalancer > PageNavSoccer}} --is present-- 
+--Click on-- {{web > TeamBuilderBalancer > PageNavSoccer}} 
+--Click on-- {{web > TeamBuilderBalancer > NumberofPlayers}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[2]] --in-- {{web > TeamBuilderBalancer > NumberofPlayers}} 
+--Click on-- {{web > TeamBuilderBalancer > NumberofTeams}} 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[2]] --in-- {{web > TeamBuilderBalancer > NumberofTeams}} 
+--Click on-- {{web > TeamBuilderBalancer > NextButton}} 
+--Wait for-- [[100]] --milliseconds-- 
+--Click on-- {{web > TeamBuilderBalancer > fltsemanticnode85}} 
+--Verify if-- {{web > TeamBuilderBalancer > Pleaseenterplayername1}} --is visible-- 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[John Does]] --in-- {{web > TeamBuilderBalancer > Pleaseenterplayername1}} 
+--Verify if-- {{web > TeamBuilderBalancer > Pleaseenterplayername2}} --is visible-- 
+--Wait for-- [[10]] --milliseconds-- 
+--Input value-- [[KenyGin]] --in-- {{web > TeamBuilderBalancer > Pleaseenterplayername2}} 
+##Click on Confirm Button 
+--Click on-- {{web > TeamBuilderBalancer > GenerateTeamsBtn}} 
+--Verify if-- {{web > TeamBuilderBalancer > PrefilledSkillsValuePopUp}} --is visible-- 
+--Click on-- {{web > TeamBuilderBalancer > SignInBtn}} 
+--Click on-- {{web > TeamBuilderBalancer > GenerateTeamsBtn}} 
+--Verify if-- {{web > TeamBuilderBalancer > WelcomePopUp_1}} --is visible-- 
+--Click on-- {{web > TeamBuilderBalancer > GotItBtn}} 
+--Verify if-- {{web > TeamBuilderBalancer > TeamsResultTxt}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > TeamsResultTxt}} --is equal to-- [[Teams Result]] 
+

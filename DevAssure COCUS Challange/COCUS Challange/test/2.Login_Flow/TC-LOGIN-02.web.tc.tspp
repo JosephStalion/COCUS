@@ -1,0 +1,24 @@
+>>testDataType: undefined
+>>summary: Login to homepage with valid email
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/signin --> The sign-in page loads successfully.
+Verify if "Sign In" text is visible --> The "Sign In" text element is displayed on the page.
+Verify if text "Sign In" equals "Sign In" --> The text of the element matches "Sign In".
+Click on "Email" --> The "Email" input field is focused/activated.
+Input value "test@mail.com" into "Email" --> The "Email" field is populated with "test@mail.com".
+Click on "Password" --> The "Password" input field is focused/activated.
+Input value "password" into "Password" --> The "Password" field is populated with "password".
+Click on "Sign In" button --> Login submission succeeds due to valid credentials.
+Verify if text "Team Balancer" is visible --> The "Team Balancer" text is displayed on the page.
+^^
+
+__web > TeamBuilderBalancer > Login__ ::urls.COCUS_SignIn:: [[Sign In]] [[test@mail.com]] [[password]] [[Team Balancer]] 
+

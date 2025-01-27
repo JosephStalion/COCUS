@@ -1,0 +1,29 @@
+>>testDataType: undefined
+>>summary: Navigation Through Onboarding and Checks Buttons "WithoutLogin" & "SuperAccount" are present in the page
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/onboarding --> OnBoarding loads and it's possible to navigate through it
+^^
+
+--Open URL-- ::urls.COCUS_OnBoarding:: 
+--Verify if-- {{web > TeamBuilderBalancer > HeaderTextOnBoard1}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > HeaderTextOnBoard1}} --is equal to-- [[Easily Organize Teams Effortlessly add players, set their skills, and create balanced teams in seconds!]] 
+--Click on-- {{web > TeamBuilderBalancer > NextButton}} 
+--Verify if-- {{web > TeamBuilderBalancer > HeaderTextOnBoard2}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > HeaderTextOnBoard2}} --is equal to-- [[Analyze Team Strength Access detailed insights on team and player performance to enhance game balance.]] 
+--Click on-- {{web > TeamBuilderBalancer > NextButton}} 
+--Verify if-- {{web > TeamBuilderBalancer > HeaderTextOnBoard3}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > HeaderTextOnBoard3}} --is equal to-- [[Track Progress Over Time Monitor team improvements and progress with comprehensive analytics and reports.]] 
+--Click on-- {{web > TeamBuilderBalancer > NextButton}} 
+--Verify if-- {{web > TeamBuilderBalancer > HeaderTextOnBoard4}} --is visible-- 
+--Verify if text of-- {{web > TeamBuilderBalancer > HeaderTextOnBoard4}} --is equal to-- [[Unlock Features by Creating an Account Create your free account to save player data, track your team's history, and unlock exclusive tools for better game management!]] 
+--Verify if-- {{web > TeamBuilderBalancer > SuperAccountBtn}} --is visible-- 
+--Verify if-- {{web > TeamBuilderBalancer > WithouLoginBtn}} --is visible-- 
+

@@ -1,0 +1,27 @@
+>>testDataType: undefined
+>>summary: Enter invalid email (e.g., test@example.com) and password.
+>>tags: 
+>>feature: 
+>>ticketUrl: 
+>>importSource: 
+>>priority: 
+>>aiRequestId: 
+
+
+^^detailed_steps
+Open URL /#/signin --> The sign-in page loads successfully.
+Click on "Email" --> The "Email" input field is focused/activated.
+Input "faketest@mail.com" into "Email" --> The "Email" field is populated with the invalid email address.
+Click on "Password" --> The "Password" input field is focused/activated.
+Input value "password" into "Password" --> The "Password" field is populated with "password".
+Click on "Sign In" button --> Login is not successful, and the user is not redirected to the authenticated page.
+
+^^
+
+--Open URL-- ::urls.COCUS_SignIn:: 
+--Click on-- {{web > TeamBuilderBalancer > Email}} 
+--Input value-- [[faketest@mail.com]] --in-- {{web > TeamBuilderBalancer > Email}} 
+--Click on-- {{web > TeamBuilderBalancer > Password}} 
+--Input value-- [[password]] --in-- {{web > TeamBuilderBalancer > Password}} 
+--Click on-- {{web > TeamBuilderBalancer > SignInBtn}} 
+
